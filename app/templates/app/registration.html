@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      {% load static %}
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Capture The Flag - Register</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'app/css/bootstrap4-neon-glow.min.css'%}">
+      <link rel="stylesheet" href="{% static 'app/css/main.css'%}">
+      <link rel="stylesheet" href="{% static 'app/css/particles.css'%}">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <link rel='stylesheet' href='//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css'>
+      <link rel="shortcut icon" href="{% static 'app/img/favicon.ico'%}" type="image/x-icon">
+      <link rel="icon" href="{% static 'app/img/favicon.ico'%}" type="image/x-icon">
+   </head>
+   <body>
+      <div id="particles-js"></div>
+      <div class="navbar-dark text-white">
+         <div class="container">
+            <nav class="navbar px-0 navbar-expand-lg navbar-dark">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                     <a href="/" class="pl-md-0 p-3 text-light">Home</a>
+                     <a href="/login" class="p-3 text-decoration-none text-light">Login</a>
+                     <a href="/instructions" class="p-3 text-decoration-none text-light active">Instructions</a>
+                  </div>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <div class="container py-5 mb5">
+         <h1 class="mb-5" style="text-align: center">Register your team for the CTF<span class="vim-caret">&nbsp;&nbsp;</span></h1>
+         <div class="row py-4">
+            <div class="col-md-8 order-md-2">
+               <h4 class="mb-3">Team Details</h4>
+               <form class="needs-validation" novalidate  method="POST" action='/register/'>
+                  {% csrf_token %}
+                  {% for message in messages %}
+                  <div class="alert alert-dismissible fade show alert-success" role="alert">
+                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                     <span aria-hidden="true">×</span>
+                     </button>
+                     <strong>{{ message }}</strong>
+                  </div>
+                  {% endfor %}
+                  <div class="mb-3">
+                     <label for="teamname">Team Name</label>
+                     <div class="input-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="teamname" name="teamname" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                           Your teamname is required.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="email">Player 1: Email <span class="text-muted"></span></label>
+                     <input type="email" class="form-control" id="email1" name="email1">
+                     <div class="invalid-feedback">
+                        Please enter a valid email address.
+                     </div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="tel">Player 1: Contact<span class="text-muted"></span></label>
+                     <input id="phone" type="tel" class="form-control" id="phone1" name="phone1" p>
+                     <div class="invalid-feedback">
+                        Please enter a valid phone number.
+                     </div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="email">Player 2: Email<span class="text-muted"></span></label>
+                     <input type="email" class="form-control" id="email2" name="email2">
+                     <div class="invalid-feedback">
+                        Please enter a valid email address.
+                     </div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="tel">Player 2: Contact<span class="text-muted"></span></label>
+                     <input id="phone" type="tel"  class="form-control" id="phone2" name="phone2">
+                     <div class="invalid-feedback">
+                        Please enter a valid phone number.
+                     </div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="password">Password <span class="text-muted"></span></label>
+                     <div class="input-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text">#</span>
+                        </div>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Make sure nobody's behind you ;)">
+                        <div class="invalid-feedback">
+                           Please enter a valid password.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-5 mb-3">
+                        <label for="state">Category</label>
+                        <select class="custom-select d-block w-100" name="category" id="category" required>
+                           <option value="JR">Junior</option>
+                           <option value="SR">Senior</option>
+                        </select>
+                        <div class="invalid-feedback">
+                           Please select a valid year
+                        </div>
+                     </div>
+                     
+                  </div>
+                  <hr class="mb-4">
+                  <div class="custom-control custom-checkbox">
+                     <input type="checkbox" class="custom-control-input" id="solemnly-swear">
+                     <label class="custom-control-label" for="solemnly-swear">I solemnly swear that I am up to no good.</label>
+                  </div>
+                  <hr class="mb-4">
+                  <!-- <a href="#!" class="btn btn-outline-primary btn-shadow">Outline Button</a> -->
+                  <button class="btn btn-outline-success btn-shadow btn-lg btn-block" type="submit"> Count me in. </button>
+               </form>
+            </div>
+            <div class="col-md-2 order-md-1"></div>
+            <div class="col-md-2 order-md-3"></div>
+         </div>
+      </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+      <script src="{% static 'app/js/particles.js'%}"></script>
+      <script src="{% static 'app/js/app.js'%}"></script>
+      <script src="{% static 'app/js/questionLogic.js'%}"></script>
+   </body>
+</html>

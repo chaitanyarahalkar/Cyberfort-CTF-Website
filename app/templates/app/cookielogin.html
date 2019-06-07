@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>
+		
+
+	</title>
+	<link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+<body>
+
+</body>
+<script>alert('{{ flag }}')</script>
+
+<form class="box" method="POST">
+  <h1>Login</h1>
+    <input type="text" readonly id="email" name="email" value="admin@lakshya.com">
+    <input type="password" id="password" name="password" placeholder="Password">
+  <input type="submit" value="Confirm Identity"></input>
+</form>
+
+</html>
