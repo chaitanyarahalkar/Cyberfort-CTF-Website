@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser,BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib import admin
+from import_export.admin import ImportExportActionModelAdmin
 
 
 # Create your models here. Use set_password 
@@ -49,3 +50,7 @@ class Questions(models.Model):
 	class Meta:
 		verbose_name = 'Question'
 		verbose_name_plural = 'Questions'
+
+
+class QuestionsAdmin(ImportExportActionModelAdmin):
+	pass
