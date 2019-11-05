@@ -51,19 +51,9 @@ def register(request):
 	if request.method == 'POST':
 		team.username = request.POST.get('teamname')
 		team.email1 = request.POST.get('email1')
-		team.email2 = request.POST.get('email2')
-		team.phone1 = request.POST.get('phone1').replace("+","")
-		team.phone2 = request.POST.get('phone2').replace("+","")
 		team.password = make_password(request.POST.get('password'))
 		team.category = request.POST.get('category')
-		if team.phone2 == '':
-			team.phone2 = team.phone1
-		if team.email2 == '':
-			team.email2 = team.email1
-		if team.phone1 == '':
-			team.phone1 = team.phone2
-		if team.email1 == '':
-			team.email1 = team.email2
+		
 		try:
 			team.clean_fields()
 			team.save()
