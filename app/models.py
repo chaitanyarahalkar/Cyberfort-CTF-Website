@@ -12,7 +12,7 @@ CATEGORY_CHOICE = ((JUNIOR,'Junior'),(SENIOR,'Senior'))
 
 class Team(AbstractUser):
 	email1 = models.EmailField()
-	email2 = models.EmailField()
+	email2 = models.EmailField(default='johndoe@example.com')
 	phone1 = models.IntegerField(default=0)
 	phone2 = models.IntegerField(default=0)
 	points = models.IntegerField(default=0)

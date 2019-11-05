@@ -49,14 +49,14 @@
                <form class="needs-validation" novalidate method="POST" action="/login/">
                   {% csrf_token %}
                   <div class="mb-3">
-                     <label for="Teamname">Teamname</label>
+                     <label for="Teamname">Username</label>
                      <div class="input-group">
                         <div class="input-group-prepend">
                            <span class="input-group-text">@</span>
                         </div>
                         <input type="text" class="form-control" id="teamname" name="teamname" required>
                         <div class="invalid-feedback" style="width: 100%;">
-                           Your Team name is required.
+                           Your username is required.
                         </div>
                      </div>
                   </div>
