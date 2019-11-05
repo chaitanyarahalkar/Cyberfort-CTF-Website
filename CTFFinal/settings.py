@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -131,3 +132,4 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False 
 SECURE_SSL_REDIRECT = True
 
+django_heroku.settings(locals())
