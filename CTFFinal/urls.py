@@ -44,6 +44,7 @@ urlpatterns = [
     url(r'^challenge-login/',views.cookielogin),
     url(r'^challenge-login-1/',views.hiddenfield),
     url(r'^infinite/',TemplateView.as_view(template_name='app/infinite.html')),
+    url(r'^sitemap.xml',TemplateView.as_view(template_name='app/sitemap.xml'))
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
