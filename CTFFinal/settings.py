@@ -129,5 +129,5 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False 
-
+SECURE_SSL_REDIRECT = True
 
