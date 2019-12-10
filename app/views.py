@@ -26,8 +26,6 @@ def handler404(request, exception, template_name="404.html"):
     return response
 
 
-
-
 @gzip_page 
 def teamlogin(request):
 	if request.method == 'POST':
@@ -74,6 +72,10 @@ def index(request):
 def instructions(request):
 	return render(request,'app/instructions.html')
 
+
+@gzip_page
+def about(request):
+	return render(request,'app/about.html')
 
 def teamlogout(request):
 	request.user.timeRequired = time.time() - request.session.get('timer')
