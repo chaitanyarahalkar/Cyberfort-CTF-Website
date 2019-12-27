@@ -1,7 +1,10 @@
 ![Cyberfort CTF](logo.png)
 
 
-Cyberfort CTF is an online platform to test and advance skills in Penetration Testing and Cybersecurity. It is create
+Cyberfort CTF is a free online platform to test and advance skills in Penetration Testing and Cybersecurity. This repository hosts the codebase for [cyberfort.rocks](https://cyberfort.rocks). 
+
+The project can be hosted as it is or can be extended as per requirements.
+
 
 ### Running the Project
 
@@ -29,6 +32,16 @@ cyberfort@rocks:$ python manage.py migrate
 cyberfort@rocks:$ python manage.py runserver
 
 ```
+
+Create a super user to upload CTF challenges - 
+
+```bash
+
+cyberfort@rocks:$ python manage.py createsuperuser
+
+```
+The administration page is located by default at [localhost:8000/admin](http://localhost:8000/admin). New challenges can be uploaded here. Challenge-related files will persist in the Uploads folder. Settings for the website can be configured using the ```CTFFinal/settings.py``` file.
+
 
 #### Hosted Deployment 
 One-click deploy on [Heroku](https://heroku.com)
