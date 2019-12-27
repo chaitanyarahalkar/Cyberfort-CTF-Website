@@ -10,7 +10,7 @@ The project can be hosted as it is or can be extended as per requirements.
 
 
 #### Running Locally 
-Cyberfort CTF is designed using the [Django framework](https://djangoproject.org). Building the project requires Pip and Python 3. It is recommended to install all the Python dependencies in a [virtual environment](https://pypi.org/project/virtualenv/). 
+Cyberfort CTF is designed using the [Django framework](https://djangoproject.org). Building the project requires PIP and Python 3. It is recommended to install all the Python dependencies in a [virtual environment](https://pypi.org/project/virtualenv/). 
 
 To get started, create a virtual environment - 
 
@@ -40,7 +40,7 @@ Create a super user to upload CTF challenges -
 cyberfort@rocks:$ python manage.py createsuperuser
 
 ```
-The administration page is located by default at [localhost:8000/admin](http://localhost:8000/admin). New challenges can be uploaded here. Challenge-related files will persist in the Uploads folder. Settings for the website can be configured using the ```CTFFinal/settings.py``` file.
+The administration page is located by default at [localhost:8000/admin](http://localhost:8000/admin). New challenges can be added here. Challenge-related files will persist in the Uploads folder. Settings for the website can be configured using the ```CTFFinal/settings.py``` file.
 
 
 #### Hosted Deployment 
