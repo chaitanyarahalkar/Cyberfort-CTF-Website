@@ -1,7 +1,7 @@
 ![Cyberfort CTF](logo.png)
 
 
-Cyberfort CTF is a free online platform to test and advance skills in Penetration Testing and Cybersecurity. This repository hosts the codebase for [cyberfort.rocks](https://cyberfort.rocks). 
+CyberFort CTF is a free online platform to test and advance skills in Penetration Testing and Cybersecurity. This repository hosts the codebase for [cyberfort.rocks](https://cyberfort.rocks). 
 
 The project can be hosted as it is or can be extended as per requirements.
 
@@ -10,7 +10,7 @@ The project can be hosted as it is or can be extended as per requirements.
 
 
 #### Running Locally 
-Cyberfort CTF is designed using the [Django framework](https://djangoproject.com). Building the project requires PIP and Python 3. It is recommended to install all the Python dependencies in a [virtual environment](https://pypi.org/project/virtualenv/). 
+CyberFort CTF is designed using the [Django framework](https://djangoproject.com). Building the project requires PIP and Python 3. It is recommended to install all the Python dependencies in a [virtual environment](https://pypi.org/project/virtualenv/). 
 
 To get started, create a virtual environment - 
 
