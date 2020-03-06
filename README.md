@@ -60,6 +60,10 @@ One-click deploy on [Heroku](https://heroku.com)
 
 * Github: [@anushkavirgaonkar](https://github.com/anushkavirgaonkar)
 
+ **Harsh Saglani**
+
+* Github: [@ashawe](https://github.com/ashawe)
+
 #### Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/chaitanyarahalkar/Cyberfort-CTF-Website/issues).
